@@ -38,13 +38,11 @@ public abstract class BaseModel implements Serializable {
     private LocalDateTime updatedAt;
 
     private Integer updatedBy;
-
     @PrePersist
     public void prePersist() {
 //        this.createdAt = LocalDateTime.now();
         this.active = true;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

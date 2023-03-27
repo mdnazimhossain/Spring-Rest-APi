@@ -15,7 +15,6 @@ public class Controller {
     @Autowired
     Service service;
 
-
     @PostMapping("/posts")
     public void save(@RequestBody Post post){
         service.save(post);
@@ -33,7 +32,6 @@ public class Controller {
 
     @DeleteMapping("/posts/{id}")
     public void delete(@PathVariable("id") Long id){
-
         service.delete(id);
     }
 
